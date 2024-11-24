@@ -33,13 +33,12 @@ export default function Home() {
   };
 
   return (
-    <div className="p-4 max-w-3xl mx-auto">
+    <div className="p-4 max-w-3xl mx-auto ">
       <form onSubmit={handleSubmit} className="space-y-4">
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="w-full p-2 border rounded"
-          rows="4"
+          className="w-full p-4 border rounded text-black min-h-[250px] bg-blue-100"
           placeholder="Enter your prompt here..."
         />
         <button
@@ -52,9 +51,9 @@ export default function Home() {
       </form>
 
       {result && (
-        <div className="mt-6 p-4 bg-gray-50 rounded-lg shadow">
-          <h2 className="font-bold mb-2">AI Response:</h2>
-          <div className="prose max-w-none whitespace-pre-wrap">{result}</div>
+        <div className="mt-6 p-4 bg-white rounded-lg shadow">
+          <h2 className="font-bold mb-2 text-black">AI Response:</h2>
+          <div className="prose max-w-none whitespace-pre-wrap text-black">{result}</div>
         </div>
       )}
     </div>
